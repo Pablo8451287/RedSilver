@@ -1153,30 +1153,6 @@
 
 <!-- Link dinâmico será inserido via JavaScript -->
 
-<script>
-	// Delay de 30 segundos para mostrar o banner
-	setTimeout(function () {
-		document.getElementById('floating-container').style.display = 'flex';
-
-		// ======= Inicia Contador =======
-		const countdownEl = document.getElementById('countdown');
-		const startingMinutes = 5;
-		let time = startingMinutes * 60;
-
-		function updateCountdown() {
-			const minutes = Math.floor(time / 60);
-			let seconds = time % 60;
-			seconds = seconds < 10 ? '0' + seconds : seconds;
-
-			countdownEl.innerHTML = `${minutes}:${seconds}`;
-			time--;
-
-			if (time < 0) {
-				clearInterval(interval);
-				countdownEl.innerHTML = '0:00';
-			}
-		}
-
 		updateCountdown();
 		// const interval = setInterval(updateCountdown, 1000);
 
